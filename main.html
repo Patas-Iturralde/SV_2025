@@ -8,6 +8,22 @@
 </head>
 <style>
 
+h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h4 {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            margin: 10px 0 30px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+
     .card {
         width: 190px;
         height: 254px;
@@ -84,7 +100,9 @@
     }
 
     body {
-        background: linear-gradient(-45deg, #c377059a 0%, #e70000b3 100%);
+        background: linear-gradient(-45deg, #ff7e5f, #feb47b, #ff6f61, #ffcccb);
+        background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
     }
 
     body,
@@ -141,7 +159,7 @@
         opacity: 1;
     }
 
-    .card1__title {
+    .card1__title { 
         margin: 0;
         font-size: 24px;
         color: #333;
@@ -171,9 +189,116 @@
         height: 100%;
         object-fit: cover;
     }
+    .card1 h2 {
+            font-size: 1.5rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .card1 p {
+            font-size: 1rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+    @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .heart {
+            position: absolute;
+            top: -20px;
+            animation: fall 5s linear infinite;
+            font-size: 2rem;
+            color: #ff6f61;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-20px); }
+            100% { transform: translateY(100vh); }
+        }
+    .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hearts-container span {
+            position: absolute;
+            display: block;
+            animation: fall linear infinite;
+        }
+
+        .hearts-container span:nth-child(1) {
+            left: 10%;
+            animation-duration: 8s;
+        }
+
+        .hearts-container span:nth-child(2) {
+            left: 20%;
+            animation-duration: 10s;
+        }
+
+        .hearts-container span:nth-child(3) {
+            left: 30%;
+            animation-duration: 7s;
+        }
+
+        .hearts-container span:nth-child(4) {
+            left: 40%;
+            animation-duration: 9s;
+        }
+
+        .hearts-container span:nth-child(5) {
+            left: 50%;
+            animation-duration: 6s;
+        }
+
+        .hearts-container span:nth-child(6) {
+            left: 60%;
+            animation-duration: 8s;
+        }
+
+        .hearts-container span:nth-child(7) {
+            left: 70%;
+            animation-duration: 10s;
+        }
+
+        .hearts-container span:nth-child(8) {
+            left: 80%;
+            animation-duration: 7s;
+        }
+
+        .hearts-container span:nth-child(9) {
+            left: 90%;
+            animation-duration: 9s;
+        }
+
+        .hearts-container span:nth-child(10) {
+            left: 95%;
+            animation-duration: 6s;
+        }
 </style>
 
 <body>
+    <div class="hearts-container">
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+        <span class="heart">❤️</span>
+    </div>
     <br><br><br><br><br><br><br><br>
     <div class="main">
         <div class="card" id="c1"><img src="/img/foto4.jpg" alt="Foto 1" /></div>
@@ -190,7 +315,7 @@
                 <img src="/img/foto5.jpg" alt="Foto 1" />   
             </svg>
             <div class="card1__content">
-                <p class="card1__title">Viajes</p>
+                <h2 class="card1__title">Viajes</h2>
                 <p class="card1__description">
                     Para poder estar contigo en lugares tan increibles como lo eres tu. Ya sea con o sin permiso.
                 </p>
@@ -201,7 +326,7 @@
                 <img src="/img/foto7.jpg" alt="Foto 1" /> 
             </svg>
             <div class="card1__content">
-                <p class="card1__title">Momentos inolvidables</p>
+                <h2 class="card1__title">Momentos inolvidables</h2>
                 <p class="card1__description">
                     De esos que se me quedan en la cabeza para siempre, y que me hacen sonreir cada vez que los recuerdo.
                 </p>
@@ -212,7 +337,7 @@
                 <img src="/img/foto6.jpg" alt="Foto 1" /> 
             </svg>
             <div class="card1__content">
-                <p class="card1__title">Comida</p>
+                <h2 class="card1__title">Comida</h2>
                 <p class="card1__description">
                     No nos vamos a mentir, es lo que más hacemos y de lo que más disfrutamos juntos.    
                 </p>
@@ -223,7 +348,7 @@
                 <img src="/img/foto8.jpg" alt="Foto 1" /> 
             </svg>
             <div class="card1__content">
-                <p class="card1__title">Nuevas experiencias</p>
+                <h2 class="card1__title">Nuevas experiencias</h2>
                 <p class="card1__description">
                     Porque siempre se nos ocurre algo nuevo que hacer, y ninguna me imagino sin estar a tu lado.
                 </p>
